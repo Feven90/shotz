@@ -1,0 +1,22 @@
+.container {
+    background-color: black;
+    /* opacity: 1; */
+}
+#movie{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    
+}
+.movie-image {
+    height: 300px;
+    display: block;
+}
+.black-panther {
+    justify-items: flex-start; 
+   margin-bottom: 20px;
+}
+.content {
+    color: #fff;
+    margin-left: 20px;
+}
