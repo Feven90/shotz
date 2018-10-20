@@ -1,0 +1,16 @@
+{
+    "location": [
+        {
+        "image":"https://phinemo.com/wp-content/uploads/2018/02/wakanda-di-dunia-nyata-2.jpg",
+        "name": "Eg: Starbucks",
+        "address": "Eg: 1 Terminal Dr #325, Nashville, TN 37214",
+        "time": "Morning"
+    },
+    {
+        "image":"    http://www.nhillfilms.com/uploads/articles/rweUAE_cYu.jpg",
+        "name": "Eg: Starbucks",
+        "address": "Eg: 1 Terminal Dr #325, Nashville, TN 37214",
+        "time": "Morning"
+    }
+] 
+}
