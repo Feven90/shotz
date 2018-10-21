@@ -1,13 +1,4 @@
-import { printToDom } from "../helpers/util.js";
 
-
-let movie = [];
-const setMovie = (newArray) => {
-    movie = newArray;
-} 
-const getMovie = () => {
-    return movie;
-}
 const myMovie = (movieArray) => {
     let newString= "";
     movieArray.forEach(movie => {
@@ -21,6 +12,8 @@ const myMovie = (movieArray) => {
     newString += `<p class="card-text">${movie.description}<p>`;
     newString += `</div>`
 });
-printToDom(newString,"movie");
+// print to DOM
+$("#movie").append(newString);
 }
-export {getMovie,setMovie,myMovie}
+
+export {myMovie}

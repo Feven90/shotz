@@ -12,7 +12,7 @@
             <nav class="navbar navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input id="input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </nav>    
@@ -22,11 +22,16 @@
         </div> 
 
     </div>
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="./javascripts/main.js" type="module"></script>
     <script src="./javascripts/components/movieComponent.js" type="module"></script>
-    <script src="./javascripts/components/loacationComponent.js" type="module"></script>
-    <script src="./javascripts/helpers/util.js" type="module"></script>
+    <script src="./javascripts/components/locationComponent.js" type="module"></script>
     <script src="./javascripts/data/movieData.js" type="module"></script>
     <script src="./javascripts/data/locationsData.js" type="module"></script>
+    <script src="./javascripts/events.js" type="module"></script>
 </body>
 </html>
