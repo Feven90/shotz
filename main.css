@@ -27,3 +27,9 @@
 .location {
     margin:20px;
 }
+#filter{
+    justify-content: center;
+}
+.btn {
+    width:200px; 
+}
