@@ -1,10 +1,17 @@
 import { movieLocation } from '../components/locationComponent.js';
 
-$.get('../db/location.json')
-    .done((data) => {
-        console.log(data);
-        movieLocation(data.location);
+const loadLocationsForMovie = (Id) => {
+    return new Promise ((resolve,reject) => {
+
+        $.get('../db/location.json')
+        .done((data) => {
+            console.log(data);
+            resolve(data.location);
+        })
+        .fail((error) => {
+            reject(error);
+        })
     })
-    .fail((error) => {
-        console.error(error);
-    })
+    
+}
+export{loadLocationsForMovie}

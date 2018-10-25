@@ -1,3 +1,4 @@
+import {loadLocationsForMovie} from '../data/locationsData.js';
 const movieLocation = (locationArray) => {
     let newString= "";
     locationArray.forEach(location => {
@@ -46,5 +47,11 @@ $(".After Dark").click(() => {
 $("location").show();
 $(".location").not(".After Dark").hide();
 });
-
-export {movieLocation,shotzLocation}
+const initalizeLocationView = () => {
+    loadLocationsForMovie().then((location) => {
+    return movieLocation(location);;
+}).catch((error) => {
+    console.error(error);
+  })
+}
+export {movieLocation,shotzLocation,initalizeLocationView}
