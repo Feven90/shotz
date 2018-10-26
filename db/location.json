@@ -1,24 +1,28 @@
 {
     "location": [
         {
+        "id": "location1",
         "image":"https://phinemo.com/wp-content/uploads/2018/02/wakanda-di-dunia-nyata-2.jpg",
         "name": "Pinewood Studios",
         "address": "Atlanta, Georgia, TN 37214",
         "time": "Morning"
     },
     {
+        "id": "location2",
         "image":"    http://www.nhillfilms.com/uploads/articles/rweUAE_cYu.jpg",
         "name": "Busan’s Gwangan Diamond Bridge",
         "address": "#325, Busan, South Korea 37214",
         "time": "Evening"
     },
     {
+        "id": "location3",
         "image":"    https://images.hellogiggles.com/uploads/2018/02/18034810/where-was-black-panther-filmed-argentina.jpg",
         "name": "South Africa",
         "address": "Tanzania, 37214",
         "time": "Afternoon"
     },
     {
+        "id": "location4",
         "image":"https://media.architecturaldigest.com/photos/5a9708c74692126e06f3503c/master/w_768/WWT0020_v008_027999.1081.jpg",
         "name": "Wakanda",
         "address": "Wakanda, If it existes 37214",
