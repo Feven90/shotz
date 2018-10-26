@@ -1,9 +1,9 @@
 
-import {loadMovies} from '../data/movieData.js';
+import {loadMovies,getLocationsArrayFromMovies} from '../data/movieData.js';
 const myMovie = (movieArray) => {
     let newString= "";
     movieArray.forEach(movie => {
-    newString += `<div id="${movie.id}" class="black-panther movie card" style="width: 18rem;">`;
+    newString += `<div id="${movie.id}" class="movie card" style="width: 18rem;">`;
     newString += `<img  class="movie-image card-img-top" src=${movie.image} width="200" height="200">`;
     newString += `</div>`;
     newString += `<div class="content">`
@@ -29,7 +29,10 @@ $('#movie').on('click', (e) => {
 const initalizeMovieView = () => {
     loadMovies().then((movies) => {
     return myMovie(movies);;
-}).catch((error) => {
+}).then((LocationsArray) => {
+return getLocationsArrayFromMovies();
+})
+.catch((error) => {
     console.error(error);
   })
 }
