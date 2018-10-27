@@ -1,5 +1,6 @@
 
 import {loadMovies,getLocationsArrayFromMovies} from '../data/movieData.js';
+import {locationIdsForMovie} from '../data/locationsData.js';
 const myMovie = (movieArray) => {
     let newString= "";
     movieArray.forEach(movie => {
@@ -18,19 +19,26 @@ const myMovie = (movieArray) => {
 // print to DOM
 $("#movie").append(newString);
 }
+
+// const Event = () => {
 $('#movie').on('click', (e) => {
     const clickedBoardId = $(e.target).closest('.movie').attr('id');
-  //   $('#boards-page').hide();
-  //   $('#pins-page').show();
+    $('#movie').hide();
+    $('#location').show();
   console.log(clickedBoardId);
   //   initialPinView(clickedBoardId);
   })
+// }
+
 
 const initalizeMovieView = () => {
     loadMovies().then((movies) => {
-    return myMovie(movies);;
+    return myMovie(movies);
 }).then((LocationsArray) => {
 return getLocationsArrayFromMovies();
+}).then((locationId) => {
+    return locationIdsForMovie(locationId);
+    // Event();
 })
 .catch((error) => {
     console.error(error);

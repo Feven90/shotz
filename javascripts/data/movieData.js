@@ -13,16 +13,25 @@ const loadMovies = () => {
     })
 }
 
-const getLocationsArrayFromMovies = (movies) => {
+const getLocationsArrayFromMovies = () => {
     return new Promise ((resolve,reject) => {
         $.get('../db/movie.json')
         .done((data) => {
             // const arrarylocation = Object.keys(movies).map(e => {
             //     console.log(`key= ${e} value = ${movies[e]}`)
-            const arraylocation = data.movies.map(movie => movie.locations);
-            resolve(arraylocation);
-            console.log(arraylocation);
+            
+            // data.forEach((arrarylocation,i) => {
+                
+            const  locationArray = data.movies.map(movie => movie.locations);
+            resolve(locationArray);
+            // console.log(locationArray);
+            const hello = locationArray[0];
+            console.log(hello);
+//             for (let i=0; i<locationArray.length-1; i++){
+// console.log(locationArray[0]);
+//             }
             })
+        // })
             // console.log(data.movies);
     
         .fail((error) => {

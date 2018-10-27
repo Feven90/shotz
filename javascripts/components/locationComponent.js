@@ -49,7 +49,7 @@ $(".location").not(".After Dark").hide();
 });
 const initalizeLocationView = () => {
     loadLocationsForMovie().then((location) => {
-    return movieLocation(location);;
+    return movieLocation(location);
 }).catch((error) => {
     console.error(error);
   })
