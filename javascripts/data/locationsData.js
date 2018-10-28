@@ -25,7 +25,7 @@ const locationIdsForMovie = (movies) => {
             const locationId = data.location.map(locations => locations.id);
             
             // })
-            console.log(locationId);
+            // console.log(locationId);
             console.log(locationId.length);
             // for (let i=0; i<locationId.length; i++){
             //     console.log(locationId[i]);
