@@ -1,6 +1,8 @@
 
 import {loadMovies,getLocationsFromMovies} from '../data/movieData.js';
 import {movieLocation} from './locationComponent.js';
+import {locationIdsForMovie} from '../data/locationsData.js';
+
 // import {locationIdsForMovie} from '../data/locationsData.js';
 
 const myMovie = (movieArray) => {
@@ -50,9 +52,13 @@ const initalizeMovieView = () => {
 
 const initalizeMovieLocations = (clickedBoardId) => {
     $('#location').hide();
-    getLocationsFromMovies(clickedBoardId).then(displayLocations => {
-return movieLocation(displayLocations);
-    }).catch((error) => {
+    getLocationsFromMovies(clickedBoardId)
+    .then(printLocations => {return movieLocation(printLocations)
+})
+// then(printLocations => {
+//     return locationIdsForMovie(printLocations)
+//     })
+    .catch((error) => {
         console.error(error);
     })
 }
