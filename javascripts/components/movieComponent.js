@@ -1,7 +1,8 @@
 
 import {loadMovies,getLocationsFromMovies} from '../data/movieData.js';
-import {movieLocation} from './locationComponent.js';
+import {movieLocation,filteredLocations} from './locationComponent.js';
 import {locationIdsForMovie} from '../data/locationsData.js';
+
 
 // import {locationIdsForMovie} from '../data/locationsData.js';
 
@@ -19,17 +20,28 @@ const myMovie = (movieArray) => {
     newString += `</div>`
 });
   
-
+console.log(newString);
 // print to DOM
 $("#movie").append(newString);
 }
 
+
 const Event = () => {
 $('#movie').on('click', (e) => {
     const clickedBoardId = $(e.target).closest('.movie').attr('id');
-    $('#movie').hide();
-    $('#location').hide();
+    if(clickedBoardId){
+        $('#movie').show();
+    }
+    else {
+        $('#movie').hide();
+
+    }
+    console.log(`${movie.id}`);
+    console.log(clickedBoardId);
+   
+    // $('#location').hide();
  initalizeMovieLocations(clickedBoardId);
+
   //   initialPinView(clickedBoardId);
   })
 }
@@ -51,16 +63,27 @@ const initalizeMovieView = () => {
 }
 
 const initalizeMovieLocations = (clickedBoardId) => {
-    $('#location').hide();
     getLocationsFromMovies(clickedBoardId)
-    .then(printLocations => {return movieLocation(printLocations)
-})
-// then(printLocations => {
-//     return locationIdsForMovie(printLocations)
-//     })
-    .catch((error) => {
+    .then((matchedLocations) => {
+     locationIdsForMovie(matchedLocations).then((locations) => {
+        $('#location').hide();
+        filteredLocations(locations)
+     })
+    }).catch((error) => {
         console.error(error);
     })
 }
+
+// const initalizeMovieLocations = (clickedBoardId) => {
+//     $('#location').hide();
+//     getLocationsFromMovies(clickedBoardId)
+//     .then(displayLocations => {
+// return movieLocation(displayLocations)
+// }).then(printLocations => {
+//     return locationIdsForMovie(printLocations)
+//     }).catch((error) => {
+//         console.error(error);
+//     })
+// }
 
 export {myMovie,initalizeMovieView} //initalizeLocationView

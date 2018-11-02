@@ -17,7 +17,22 @@ const movieLocation = (locationArray) => {
 // print to DOM 
 $("#location").append(newString);
 }
-
+const filteredLocations = (locations) => {
+    let newString= "";
+    locations.forEach(location => {
+    newString += `<div class="card location ${location.time}" style="width: 18rem;">`;
+    newString += `<img  class="card-img-top" src=${location.image} width="200" height="200">`;
+    newString += `<div class="card-body">`;
+    newString += `<h5 class="card-title location-name">${location.name}</h5>`;
+    newString += `<h6 class="card-text">${location.address}<6>`;
+    newString += `<p class="card-text time">${location.time}<p>`;
+    newString += `</div>`;
+    newString += `</div>`
+    
+});
+// print to DOM 
+$("#filtered-locations").append(newString);
+}
 
 
 const shotzLocation = (userInput) => {
@@ -61,4 +76,4 @@ const initalizeLocationView = () => {
 
 
 
-export {movieLocation,shotzLocation,initalizeLocationView}
+export {movieLocation,shotzLocation,initalizeLocationView,filteredLocations}
