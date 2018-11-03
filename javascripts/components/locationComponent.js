@@ -12,7 +12,8 @@ const movieLocation = (locationArray) => {
     newString += `<p class="card-text time">${location.time}<p>`;
     newString += `</div>`;
     newString += `</div>`
-    
+    console.log(newString);
+
 });
 // print to DOM 
 $("#location").append(newString);
@@ -54,18 +55,23 @@ $(".Morning").click(() => {
 $("location").show();
 $(".location").not(".Morning").hide();
 });
+
 $(".Evening").click(() => {
 $("location").show();
 $(".location").not(".Evening").hide();
 });
+
 $(".Afternoon").click(() => {
 $("location").show();
 $(".location").not(".Afternoon").hide();
 });
+
 $(".After Dark").click(() => {
+    console.log("click");
 $("location").show();
 $(".location").not(".After Dark").hide();
 });
+
 const initalizeLocationView = () => {
     loadLocationsForMovie().then((location) => {
     return movieLocation(location);

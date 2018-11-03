@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shotz</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <div class="container">
             <nav class="navbar navbar-dark bg-dark">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">Movies</a>
                 <form class="form-inline">
                     <input id="input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </nav> 
-        <div id="movies">
             <div id="movie"></div> 
-        </div>
+            <div id="clicked-movie"></div>
         <div id="filter">
             <button type="button" class="btn btn-primary Morning m-4">Morning</button>
             <button type="button" class="btn btn-info Evening m-4">Night</button>  
@@ -26,8 +26,10 @@
             <button type="button" class="btn btn btn-danger After Dark m-4">After Dark</button> 
 
         </div>
+        <div id="hide-locations">
             <div id="location" class="d-flex justify-content-center"></div> 
-           <div id="filtered-locations"></div> 
+        </div>
+        <div id="filtered-locations" class=d-flex justify-content-center"></div> 
     </div>
     <script
     src="http://code.jquery.com/jquery-3.3.1.min.js"
