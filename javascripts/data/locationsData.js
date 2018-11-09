@@ -23,23 +23,25 @@ const locationIdsForMovie = (displayLocations) => {
             // console.log(hello);
             // movies.forEach(locations => {
             // const locationId = data.location.map(locations => locations.id);
-            let printLocations = '';
+            let printLocations = [];
                 for(let j=0; j < displayLocations.length; j++){
                     console.log(displayLocations);
-                     printLocations = data.location.find(locationz => locationz.id === displayLocations[j]) //dat.pins gives arrary of objects
-                    console.log(PrintLocations);
-                    
+                     let printLocationz = data.location.find(locationz => locationz.id === displayLocations[j]) //dat.pins gives arrary of objects
+                   printLocations.push(printLocationz);
+                    // movieLocation(printLocations);
+                    // return printLocations;
+
+                    resolve(printLocations);
+
                 }
-            
-                return printLocations;
+            console.log(printLocations);
             
             // })
             // console.log(locationId);
-            console.log(locationId.length);
+            // console.log(locationId.length);
             // for (let i=0; i<locationId.length; i++){
             //     console.log(locationId[i]);
             // }
-            resolve(PrintLocations);
         })
         .fail((error) => {
             reject(error);
