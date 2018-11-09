@@ -7,7 +7,7 @@
             "genere": "Fantasy/Science Fiction",
             "estimated": "2018",
             "description": "After the death of his father",
-            "locations": ["location2","locattion3","location4"]
+            "locations": ["location2","location3"]
         },
         {
             "id": "2",
@@ -16,7 +16,7 @@
             "genere": "Fantasy/Science Fiction",
             "estimated": "2018",
             "description": "After the death of his father",
-            "locations": ["location1","location2","locattion3","location4"]
+            "locations": ["location1","location2","location3","location4"]
         }
     ]
 }

@@ -1,4 +1,6 @@
-import {loadLocationsForMovie} from '../data/locationsData.js';
+import {loadLocationsForMovie,locationIdsForMovie} from '../data/locationsData.js';
+// import {initalizeLocationView} from './movieComponent.js';
+
 const movieLocation = (locationArray) => {
     let newString= "";
     locationArray.forEach(location => {
@@ -15,6 +17,8 @@ const movieLocation = (locationArray) => {
 // print to DOM 
 $("#location").append(newString);
 }
+
+
 
 const shotzLocation = (userInput) => {
     $(".location").each((i,location) => {
@@ -49,9 +53,12 @@ $(".location").not(".After Dark").hide();
 });
 const initalizeLocationView = () => {
     loadLocationsForMovie().then((location) => {
-    return movieLocation(location);;
+    return movieLocation(location);
 }).catch((error) => {
     console.error(error);
   })
 }
+
+
+
 export {movieLocation,shotzLocation,initalizeLocationView}

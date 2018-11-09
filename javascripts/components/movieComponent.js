@@ -1,5 +1,10 @@
 
-import {loadMovies,getLocationsArrayFromMovies} from '../data/movieData.js';
+import {loadMovies,getLocationsFromMovies} from '../data/movieData.js';
+import {movieLocation} from './locationComponent.js';
+import {locationIdsForMovie} from '../data/locationsData.js';
+
+// import {locationIdsForMovie} from '../data/locationsData.js';
+
 const myMovie = (movieArray) => {
     let newString= "";
     movieArray.forEach(movie => {
@@ -18,23 +23,44 @@ const myMovie = (movieArray) => {
 // print to DOM
 $("#movie").append(newString);
 }
+
+const Event = () => {
 $('#movie').on('click', (e) => {
     const clickedBoardId = $(e.target).closest('.movie').attr('id');
-  //   $('#boards-page').hide();
-  //   $('#pins-page').show();
-  console.log(clickedBoardId);
+    $('#movie').hide();
+    $('#location').hide();
+ initalizeMovieLocations(clickedBoardId);
   //   initialPinView(clickedBoardId);
   })
+}
+
 
 const initalizeMovieView = () => {
     loadMovies().then((movies) => {
-    return myMovie(movies);;
-}).then((LocationsArray) => {
-return getLocationsArrayFromMovies();
+    myMovie(movies);
+// }).then((clickedBoardId) => {
+// return getLocationsFromMovies();
+// })
+// .then((locationId) => {
+//     locationIdsForMovie(locationId);
+    Event();
 })
 .catch((error) => {
     console.error(error);
   })
 }
 
-export {myMovie,initalizeMovieView}
+const initalizeMovieLocations = (clickedBoardId) => {
+    $('#location').hide();
+    getLocationsFromMovies(clickedBoardId)
+    .then(printLocations => {return movieLocation(printLocations)
+})
+// then(printLocations => {
+//     return locationIdsForMovie(printLocations)
+//     })
+    .catch((error) => {
+        console.error(error);
+    })
+}
+
+export {myMovie,initalizeMovieView} //initalizeLocationView
