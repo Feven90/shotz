@@ -66,10 +66,10 @@ $("location").show();
 $(".location").not(".Afternoon").hide();
 });
 
-$(".After Dark").click(() => {
+$(".Dark").click(() => {
     console.log("click");
 $("location").show();
-$(".location").not(".After Dark").hide();
+$(".location").not(".Dark").hide();
 });
 
 const initalizeLocationView = () => {
