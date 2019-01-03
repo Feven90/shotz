@@ -6,11 +6,20 @@
             "image": "https://thumbor.forbes.com/thumbor/1280x868/https%3A%2F%2Fblogs-images.forbes.com%2Fscottmendelson%2Ffiles%2F2018%2F02%2Fau_rich_hero_blackpanther_1_3c317c85-1200x526.jpeg",
             "genere": "Fantasy/Science Fiction",
             "estimated": "2018",
-            "description": "After the death of his father",
+            "description": "After the death of his father, T'Challa returns home to the African nation of Wakanda to take his rightful place as king. When a powerful enemy suddenly reappears, T'Challa's mettle as king -- and as Black Panther -- gets tested when he's drawn into a conflict that puts the fate of Wakanda ",
             "locations": ["location2","location3"]
         },
         {
             "id": "2",
+            "name": "Black Panther",
+            "image": "https://thumbor.forbes.com/thumbor/1280x868/https%3A%2F%2Fblogs-images.forbes.com%2Fscottmendelson%2Ffiles%2F2018%2F02%2Fau_rich_hero_blackpanther_1_3c317c85-1200x526.jpeg",
+            "genere": "Fantasy/Science Fiction",
+            "estimated": "2018",
+            "description": "After the death of his father",
+            "locations": ["location1","location2","location3","location4"]
+        },
+        {
+            "id": "3",
             "name": "Black Panther",
             "image": "https://thumbor.forbes.com/thumbor/1280x868/https%3A%2F%2Fblogs-images.forbes.com%2Fscottmendelson%2Ffiles%2F2018%2F02%2Fau_rich_hero_blackpanther_1_3c317c85-1200x526.jpeg",
             "genere": "Fantasy/Science Fiction",

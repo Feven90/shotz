@@ -2,30 +2,26 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans);
 
 body{
-    background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/02/66/12/425789c9ee094f4.jpg");
+    background-image: url("./images/blue2.jpg");
+    /* background-size: contain; */
 }
 .container {
     background-color: black;
     /* opacity: 1; */
+} 
+
+#movie {
+    justify-content: space-around;
+    width: 1000px;
+    margin-left: 40px;
 }
-#movie{
-    display: flex;
-    flex-direction: row;
-    /* justify-content: center; */
-    
-}
-.movie-image {
-    height: 300px;
-    display: block;
-    
-}
-.black-panther {
-    justify-items: flex-start; 
-   margin-bottom: 20px;
-}
-.content {
-    color: #fff;
+.movie {
+    color: #000;
     margin-left: 20px;
+    margin-top: 10px;
+}
+.card {
+    width: 200px;
 }
 .location {
     margin:20px;
@@ -36,7 +32,11 @@ body{
 .btn {
     width:200px; 
 }
-.navbar-brand{
+.navbar-brand {
     font-family: 'Courgette', cursive;
     font-size: 2em;
+}
+.navbar {
+    margin-left: 0px;
+    color: red;
 }
