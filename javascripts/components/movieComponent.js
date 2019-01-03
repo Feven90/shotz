@@ -20,32 +20,36 @@ const myMovie = (movieArray) => {
   
 console.log(newString);
 // print to DOM
-$("#movie").append(newString);
+$("#movie").html(newString);
 }
 const clickedMovie = (click) => {
     let newString= "";
-    
+    newString += `<div class="card-deck">    `
     newString += `<div id="${click.id}" class="movie card" style="width: 18rem;">`;
-    newString += `<img  class="movie-image card-img-top" src=${click.image} width="200" height="200">`;
-    newString += `</div>`;
-    newString += `<div class="content">`
-    newString += `<h3 class="card-title">${click.name}</h3>`;
+    // newString += `<img  class="movie-image card-img-top" src=${movie.image} width="200" height="200">`;
+newString += `<h3 class="card-header">${click.name}</h3>`;
     newString += `<p class="card-text">${click.genere}<p>`;
     newString += `<p class="card-text">${click.estimated}<p>`;
     newString += `<p class="card-text">${click.description}<p>`;
-    newString += `</div>`
-  
-console.log(newString);
+    newString += `</div>`;
+    newString += `</div>`;
 // print to DOM
-$("#clicked-movie").append(newString);
+$("#clicked-movie").html(newString);
 }
 
+const backButton = () => {
+$('#back').click(() => {
+    initalizeMovieView();
+})
+}
 
 const Event = () => {
 $('#movie').on('click', (e) => {
     const clickedBoardId = $(e.target).closest('.movie').attr('id');
     // $('#location').hide();
     $('#location').hide();
+    document.getElementById("back").style.display = "block";
+
     showClickedMovie(clickedBoardId);
  initalizeMovieLocations(clickedBoardId);
 
@@ -58,6 +62,7 @@ const initalizeMovieView = () => {
     loadMovies().then((movies) => {
     myMovie(movies);
     Event();
+    backButton();
 })
 .catch((error) => {
     console.error(error);
@@ -67,10 +72,8 @@ const initalizeMovieView = () => {
 const showClickedMovie = (clickedBoardId) => {
         getClickedMovie(clickedBoardId)
         .then((movieOb) => {
-            console.log(movieOb);
-            $('#movie').hide();
+            $('#movie').remove();
             clickedMovie(movieOb);
-        
         }).catch((error) => {
         console.error(error);
     })
@@ -100,4 +103,4 @@ const initalizeMovieLocations = (clickedBoardId) => {
 //     })
 // }
 
-export {myMovie,initalizeMovieView} 
+export {myMovie,initalizeMovieView, backButton} 

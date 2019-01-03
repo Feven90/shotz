@@ -67,6 +67,13 @@ $(".Dark").show();
 $(".location").not(".Dark").hide();
 });
 
+$("#all").click(() => {
+    $(".Dark").show();
+    $(".Afternoon").show();
+    $(".Evening").show();
+    $(".Morning").show();
+});
+
 const initalizeLocationView = () => {
     loadLocationsForMovie().then((location) => {
     return movieLocation(location);

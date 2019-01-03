@@ -27,6 +27,13 @@
         "name": "Wakanda",
         "address": "Wakanda, If it existes 37214",
         "time": "Dark"
+    },
+    {
+        "id": "location5",
+        "image":"https://media.architecturaldigest.com/photos/5a9708c74692126e06f3503c/master/w_768/WWT0020_v008_027999.1081.jpg",
+        "name": "Wakanda",
+        "address": "Wakanda, If it existes 37214",
+        "time": "Dark"
     }
 ] 
 }
