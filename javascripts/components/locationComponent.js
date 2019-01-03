@@ -12,7 +12,6 @@ const movieLocation = (locationArray) => {
     newString += `<p class="card-text time">${location.time}<p>`;
     newString += `</div>`;
     newString += `</div>`
-    console.log(newString);
 
 });
 // print to DOM 
@@ -39,36 +38,32 @@ $("#filtered-locations").append(newString);
 const shotzLocation = (userInput) => {
     $(".location").each((i,location) => {
         const allLocations = $(location).find("h5").html();
-        console.log(userInput);
-        console.log(allLocations.toLowerCase().includes(userInput.toLowerCase()));
                 if (allLocations.toLowerCase().includes(userInput.toLowerCase())) {
                     $(location).show();
     }
     else {
-        $(location).remove(); 
+        $(location).hide(); 
 
     }
-        console.log(allLocations);
 });
 }
 $(".Morning").click(() => {
-$("location").show();
+$(".Morning").show();
 $(".location").not(".Morning").hide();
 });
 
 $(".Evening").click(() => {
-$("location").show();
+$(".Evening").show();
 $(".location").not(".Evening").hide();
 });
 
 $(".Afternoon").click(() => {
-$("location").show();
+$(".Afternoon").show();
 $(".location").not(".Afternoon").hide();
 });
 
 $(".Dark").click(() => {
-    console.log("click");
-$("location").show();
+$(".Dark").show();
 $(".location").not(".Dark").hide();
 });
 
